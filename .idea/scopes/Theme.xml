@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Theme" pattern="file[anchor-theme-roc]:*/&amp;&amp;!file[anchor-theme-roc]:.idea//*" />
+</component>
