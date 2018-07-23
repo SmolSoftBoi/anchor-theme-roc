@@ -1,0 +1,243 @@
+/*!
+ * Copyright © 2018 Kristian Matthews. All rights Reserved.
+ */
+
+@import "variables";
+@import "components";
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  > .container {
+    flex-grow: 1;
+  }
+}
+
+.row-header {
+  background-color: $body-bg;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-right: 0;
+  margin-left: 0;
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+}
+
+.row-featured {
+  margin-bottom: $spacer * 0.5;
+}
+
+.col-featured {
+  @include media-breakpoint-down(sm) {
+    @include make-col(9);
+  }
+
+  @include media-breakpoint-down(md) {
+    @include make-col(6);
+  }
+}
+
+.col-legal {
+  text-align: left;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.col-logo {
+  @include make-col(4);
+  text-align: center;
+}
+
+.col-nav {
+  .nav {
+    justify-content: flex-end;
+  }
+}
+
+.col-search {
+  @include make-col(4);
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+
+  a {
+    @extend .text-muted;
+  }
+}
+
+.header {
+  background-image: linear-gradient(to right, $primary, $secondary);
+  border-bottom: solid 1px $gray-200;
+  line-height: 1;
+  padding-top: $spacer;
+}
+
+.header-logo {
+  @extend .text-dark;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.brand {
+  max-height: 100%;
+}
+
+.nav-scroller {
+  max-height: $spacer * 2.75;
+  margin-bottom: $spacer * 0.5;
+  overflow-y: hidden;
+  padding-top: $spacer * 0.25;
+  padding-bottom: $spacer * 0.25;
+  position: relative;
+  z-index: 2;
+
+  .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-top: -1px;
+    overflow-x: auto;
+    overflow-scrolling: touch;
+    padding-bottom: $spacer;
+    text-align: center;
+    white-space: nowrap;
+
+    a {
+      @extend .text-muted;
+      padding: $spacer * 0.5;
+      text-transform: uppercase;
+
+      &:hover,
+      &.active {
+        @extend .text-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.main {
+  .page,
+  .post,
+  .comments {
+    margin-bottom: $spacer * 4;
+  }
+
+  .page-title,
+  .post-title,
+  .comments-title {
+    font-size: 2.5rem;
+    margin-bottom: $spacer * 0.25;
+  }
+
+  .page-meta,
+  .post-meta,
+  .comments-meta {
+    color: $gray-500;
+    margin-bottom: $spacer * 1.25;
+  }
+}
+
+.jumbotron-featured {
+  @extend .bg-dark;
+  @extend .rounded;
+  color: $white;
+  padding: $spacer;
+
+  .col {
+    padding-right: 0;
+    padding-left: 0;
+
+    @include media-breakpoint-down(sm) {
+      @include make-col(9);
+    }
+
+    @include media-breakpoint-down(md) {
+      @include make-col(6);
+    }
+  }
+
+  .link {
+    color: $white;
+    font-weight: bold;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: $spacer * 2;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: $spacer * 3;
+  }
+}
+
+.card-featured {
+  margin-bottom: $spacer * 1.5;
+
+  .card-body {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  .class-text {
+    margin-bottom: auto;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-direction: row;
+    height: 250px;
+  }
+}
+
+.author {
+  color: $secondary;
+}
+
+.category {
+  color: $primary;
+  display: inline-block;
+  margin-bottom: $spacer * 0.5;
+}
+
+.date {
+  @extend .text-muted;
+  margin-bottom: $spacer * 0.25;
+}
+
+.pagination {
+  margin-bottom: $spacer * 4;
+
+  .btn {
+    @extend .btn-outline-primary;
+    border-radius: 2rem;
+  }
+}
+
+.footer {
+  background-color: $gray-100;
+  border-top: solid ($spacer * 0.05) $gray-200;
+  color: $gray-500;
+  padding: ($spacer * 2.5) 0;
+  text-align: center;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

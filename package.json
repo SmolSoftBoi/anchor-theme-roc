@@ -1,0 +1,34 @@
+{
+  "name": "anchor-theme-roc",
+  "description": "Roc theme for Anchor CMS.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "homepage": "https://github.com/EpicKris/anchor-theme-roc#readme",
+  "author": "Kristian Matthews",
+  "repository": {
+    "type": "git",
+    "url": "git+https://EpicKris@github.com/EpicKris/anchor-theme-roc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EpicKris/anchor-theme-roc/issues"
+  },
+  "dependencies": {
+    "bootstrap": "^4",
+    "feather-icons": "^4",
+    "jquery": "^3",
+    "popper.js": "^1.13.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0",
+    "css-loader": "^0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4",
+    "postcss-loader": "^2",
+    "precss": "^3",
+    "sass-loader": "^6",
+    "style-loader": "^0",
+    "webpack": "^3"
+  }
+}

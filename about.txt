@@ -1,0 +1,4 @@
+Theme name: Roc
+Description: Roc theme for Anchor CMS.
+Author name: Kristian Matthews
+Author site: https://epickris.com
